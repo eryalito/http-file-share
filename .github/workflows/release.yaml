@@ -44,3 +44,5 @@ jobs:
       - name: Build Wails app
         run: wails3 package
         
+      - name: Debug list builds
+        run: ls -la ./bin
