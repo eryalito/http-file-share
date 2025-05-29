@@ -1,0 +1,33 @@
+name: Release Pipeline for Windows
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+
+
+      - name: Install wails3 cli
+        run: go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-alpha.9
+
+      - name: Build Wails app
+        run: wails3 package
+        
+      - name: Debug list builds
+        run: ls -la ./bin
+
+      - name: Upload build artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: bin/*.exe
