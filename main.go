@@ -27,8 +27,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to start HTTP file server: %v", err)
 	}
-	log.Printf("HTTP file server is running on port %d", httpFileServer.Port())
-	log.Printf("%s", httpFileServer.Addresses())
 
 	app := application.New(application.Options{
 		Name:        "http-file-share",
