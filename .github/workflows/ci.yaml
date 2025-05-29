@@ -22,7 +22,7 @@ jobs:
             go-version-file: 'go.mod'
 
       - name: Install wails3 cli
-        run: go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-alpha.9
+        run: apt update && go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-alpha.9
 
       - name: Build Wails app
         run: wails3 build
