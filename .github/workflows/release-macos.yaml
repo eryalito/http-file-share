@@ -33,4 +33,4 @@ jobs:
       - name: Upload build artifacts
         uses: softprops/action-gh-release@v2
         with:
-          files: bin/*.app
+          files: bin/http-file-share.app

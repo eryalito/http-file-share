@@ -30,4 +30,4 @@ jobs:
       - name: Upload build artifacts
         uses: softprops/action-gh-release@v2
         with:
-          files: bin/*.exe
+          files: bin/http-file-share-amd64-installer.exe
