@@ -42,4 +42,5 @@ jobs:
         run: go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-alpha.9
 
       - name: Build Wails app
-        run: wails3 build
+        run: wails3 package
+        
