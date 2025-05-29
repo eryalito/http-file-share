@@ -6,7 +6,7 @@ toolchain go1.24.2
 
 require (
 	github.com/gin-gonic/gin v1.10.1
-	github.com/wailsapp/wails/v3 v3.0.0-dev
+	github.com/wailsapp/wails/v3 v3.0.0-alpha.9
 )
 
 require (
@@ -52,7 +52,6 @@ require (
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
 	github.com/pjbgf/sha1cd v0.3.2 // indirect
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/samber/lo v1.49.1 // indirect
 	github.com/sergi/go-diff v1.3.2-0.20230802210424-5b0b94c5c0d3 // indirect
@@ -72,5 +71,3 @@ require (
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/wailsapp/wails/v3 => ../wails/v3
