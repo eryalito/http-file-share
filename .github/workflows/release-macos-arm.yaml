@@ -1,4 +1,4 @@
-name: Release Pipeline for macOS
+name: Release Pipeline for macOS arm
 
 on:
   release:
@@ -32,9 +32,9 @@ jobs:
 
       - name: Create DMG from .app
         run: |
-          hdiutil create -volname "http-file-share" -srcfolder "bin/http-file-share.app" -ov -format UDZO "bin/http-file-share.dmg"
+          hdiutil create -volname "http-file-share" -srcfolder "bin/http-file-share.app" -ov -format UDZO "bin/http-file-share-arm.dmg"
 
       - name: Upload build artifacts
         uses: softprops/action-gh-release@v2
         with:
-          files: bin/http-file-share.dmg
+          files: bin/http-file-share-arm.dmg
